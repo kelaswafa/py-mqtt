@@ -25,14 +25,11 @@ Credits :
 Publisher:
 
 ```bash
-cd publisher-side
 python publish.py
 ```
 
 Subscriber:
 
 ```bash
-cd subscriber-side
-python subscribe-1.py
-python subscribe-2.py
+python subscribe.py
 ```

@@ -4,10 +4,15 @@ import sys
 from config import SERVER, PORT, TOPIC, QOS
 
 def on_subscribe(client, userdata, mid, granted_qos):
-    print("Subscribed : "+str(mid)+"\nGranted QoS : "+str(granted_qos[0])+"\n---------")
+    print("Subscribed\t:", mid)
+    print("Granted QoS\t:", granted_qos[0])
+    print("-"*10)
 
 def on_message(client, userdata, msg):
-    print("Topic : "+msg.topic+"\nQOS : "+str(msg.qos)+"\nMessage : "+str((msg.payload).decode('utf-8'))+"\n---------")    
+    print("Topic\t:", msg.topic)
+    print("QOS\t:", msg.qos)
+    print("Message\t:", msg.payload.decode('utf-8'))
+    print("-" *10)
 
 client = paho.Client()
 client.on_subscribe = on_subscribe

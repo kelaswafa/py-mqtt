@@ -1,7 +1,7 @@
 import paho.mqtt.client as paho
-import sys
 
-from config import SERVER, PORT, TOPIC, QOS
+from config import PORT, QOS, SERVER, TOPIC
+
 
 def on_subscribe(client, userdata, mid, granted_qos):
     print("Subscribed\t:", mid)
